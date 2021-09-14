@@ -4,7 +4,7 @@ bases:
 
 resources:
   - frontend.yaml
-  - ns.yaml
+# - ns.yaml
   - canary.yaml
   - generator.yaml
   - mapping.yaml

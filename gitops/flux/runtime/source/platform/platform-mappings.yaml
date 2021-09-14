@@ -3,6 +3,7 @@ apiVersion: getambassador.io/v2
 kind: Mapping
 metadata:
   name: linkerd-viz
+  namespace: linkerd-viz
 spec:
   prefix: /
   host: "dashboard.hephy.pro"
@@ -19,7 +20,7 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: dashboard
-  namespace: linkerd-viz
+  namespace: default
 spec:
   hostname: "dashboard.hephy.pro"
   acmeProvider:

@@ -1,0 +1,11 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: simplest-commitbee
+  namespace: simplest-commitbee
+spec:
+  prefix: /
+  service: simplest-commitbee.simplest-commitbee:80
+  rewrite: ""
+  host: simplest-commitbee.deis.hephy.pro

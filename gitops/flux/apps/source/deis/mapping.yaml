@@ -1,0 +1,11 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: deis
+  namespace: deis
+spec:
+  prefix: /
+  service: deis-controller.deis:80
+  rewrite: ""
+  host: deis.deis.hephy.pro

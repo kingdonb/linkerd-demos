@@ -2,9 +2,9 @@
 apiVersion: getambassador.io/v2
 kind: Host
 metadata:
-  name: booksapp
+  name: simplest-commitbee
   namespace: default
 spec:
-  hostname: "booksapp.hephy.pro"
+  hostname: "simplest-commitbee.deis.hephy.pro"
   acmeProvider:
     email: ambassador-cert-hephy@nerdland.info

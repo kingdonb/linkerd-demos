@@ -4,13 +4,13 @@ metadata:
   name: linkerd
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 11h10m30s
+  retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/linkerd
   prune: true
   sourceRef:
     kind: GitRepository
     name: gitops
-  validation: client
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
@@ -41,13 +41,13 @@ metadata:
 spec:
   dependsOn:
   - name: linkerd
-  interval: 1m0s
+  interval: 11h15m30s
+  retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/linkerd-viz
   prune: true
   sourceRef:
     kind: GitRepository
     name: gitops
-  validation: client
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
@@ -82,13 +82,13 @@ metadata:
 spec:
   dependsOn:
   - name: linkerd-viz
-  interval: 3m0s
+  interval: 11h20m30s
+  retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/ambassador
   prune: true
   sourceRef:
     kind: GitRepository
     name: gitops
-  validation: client
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
       kind: HelmRelease
@@ -103,13 +103,13 @@ metadata:
 spec:
   dependsOn:
   - name: linkerd-viz
-  interval: 1m0s
+  interval: 11h25m30s
+  retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/flagger
   prune: true
   sourceRef:
     kind: GitRepository
     name: gitops
-  validation: client
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment

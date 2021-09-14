@@ -2,9 +2,9 @@
 apiVersion: getambassador.io/v2
 kind: Host
 metadata:
-  name: booksapp
+  name: blog-teamhephy-info
   namespace: default
 spec:
-  hostname: "booksapp.hephy.pro"
+  hostname: "blog.teamhephy.info"
   acmeProvider:
     email: ambassador-cert-hephy@nerdland.info

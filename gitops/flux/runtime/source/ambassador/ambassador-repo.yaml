@@ -4,5 +4,5 @@ metadata:
   name: ambassador
   namespace: flux-system
 spec:
-  interval: 2m
+  interval: 36h2m
   url: https://www.getambassador.io

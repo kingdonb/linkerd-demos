@@ -1,0 +1,11 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: ob-mirror
+  namespace: ob-mirror
+spec:
+  prefix: /
+  service: ob-mirror.ob-mirror:80
+  rewrite: ""
+  host: ob-mirror.deis.hephy.pro

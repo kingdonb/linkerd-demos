@@ -3,7 +3,7 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: emojivoto
-  namespace: emojivoto
+  namespace: default
 spec:
   hostname: "emojivoto.hephy.pro"
   acmeProvider:

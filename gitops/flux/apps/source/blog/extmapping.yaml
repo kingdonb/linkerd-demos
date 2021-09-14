@@ -1,0 +1,11 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: blog-teamhephy-info
+  namespace: blog
+spec:
+  prefix: /
+  service: blog.blog:80
+  rewrite: ""
+  host: blog.teamhephy.info
