@@ -3,7 +3,8 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: podinfo
+  namespace: podinfo
 spec:
-  hostname: "podinfo.civo.59s.io"
+  hostname: "podinfo.hephy.pro"
   acmeProvider:
-    email: jmorgan@f9vs.com
+    email: ambassador-cert-hephy@nerdland.info
