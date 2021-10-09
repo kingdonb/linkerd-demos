@@ -3,6 +3,6 @@ kind: Host
 metadata:
   name: dashboard
 spec:
-  hostname: "dashboard.civo.59s.io"
+  hostname: "dashboard.hephy.pro"
   acmeProvider:
-    email: jmorgan@f9vs.com
+    email: ambassador-cert-hephy@nerdland.info
