@@ -1,6 +1,7 @@
 apiVersion: getambassador.io/v2
 kind: Host
 metadata:
+  namespace: default
   name: dashboard
 spec:
   hostname: "dashboard.hephy.pro"
