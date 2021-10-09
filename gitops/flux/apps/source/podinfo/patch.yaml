@@ -14,6 +14,8 @@ spec:
           env:
           - name: PODINFO_UI_COLOR
             value: '#C99700' # #00843D #0C2340 #AE9142
+          - name: PODINFO_UI_LOGO
+            value: https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_clap.gif
 ---
 apiVersion: v1
 kind: Service

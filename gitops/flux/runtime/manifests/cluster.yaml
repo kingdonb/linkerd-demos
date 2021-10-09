@@ -1,4 +1,4 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: linkerd
@@ -8,6 +8,7 @@ spec:
   retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/linkerd
   prune: true
+  wait: true
   sourceRef:
     kind: GitRepository
     name: gitops
@@ -95,7 +96,7 @@ spec:
       name: ambassador-edge-stack
       namespace: flux-system
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: flagger
@@ -107,9 +108,14 @@ spec:
   retryInterval: 10m0s
   path: ./gitops/flux/runtime/source/flagger
   prune: true
+  wait: true
   sourceRef:
     kind: GitRepository
     name: gitops
+  postBuild:
+    substituteFrom:
+      - kind: Secret
+        name: slack-url
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
