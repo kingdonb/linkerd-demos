@@ -9,7 +9,7 @@ spec:
   retryInterval: 10m0s
   path: ./gitops/flux/apps/source/podinfo
   dependsOn:
-    - name: finalizers
+    - name: linkerd-finally
   prune: true
   sourceRef:
     kind: GitRepository
@@ -38,7 +38,7 @@ spec:
   retryInterval: 10m0s
   path: ./gitops/flux/apps/source/emojivoto
   dependsOn:
-    - name: finalizers
+    - name: linkerd-finally
   prune: true
   sourceRef:
     kind: GitRepository
@@ -71,7 +71,7 @@ spec:
   retryInterval: 10m0s
   path: ./gitops/flux/apps/source/booksapp
   dependsOn:
-    - name: finalizers
+    - name: linkerd-finally
   prune: true
   sourceRef:
     kind: GitRepository
