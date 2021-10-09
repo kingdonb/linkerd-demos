@@ -1,0 +1,9 @@
+apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  namespace: default
+  name: podinfo-dev
+spec:
+  hostname: "podinfo-dev.hephy.pro"
+  acmeProvider:
+    email: ambassador-cert-hephy@nerdland.info
