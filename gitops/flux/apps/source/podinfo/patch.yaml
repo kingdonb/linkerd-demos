@@ -9,14 +9,14 @@ spec:
     spec:
       containers:
         - name: podinfod
-          image: docker.io/kingdonb/podinfo:6.0.0 # {"$imagepolicy": "flux-system:podinfo"}
+          image: docker.io/kingdonb/podinfo:6.0.1 # {"$imagepolicy": "flux-system:podinfo"}
           securityContext:
             runAsUser: 1337
           env:
-          - name: PODINFO_UI_COLOR
-            value: '#AE9142' # #00843D #0C2340 #C99700
-          - name: PODINFO_UI_LOGO
-            value: https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_bunny.gif
+            - name: PODINFO_UI_COLOR
+              value: '#AE9142' # #00843D #0C2340 #C99700
+            - name: PODINFO_UI_LOGO
+              value: https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_bunny.gif
 ---
 apiVersion: v1
 kind: Service
