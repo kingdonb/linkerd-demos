@@ -14,9 +14,9 @@ spec:
             runAsUser: 1337
           env:
             - name: PODINFO_UI_COLOR
-              value: '#C99700' # #00843D #0C2340 #AE9142
-            # - name: PODINFO_UI_LOGO
-            #   value: https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_bunny.gif
+              value: '#0C2340' # #00843D #C99700 #AE9142
+            - name: PODINFO_UI_LOGO
+              value: https://raw.githubusercontent.com/stefanprodan/podinfo/gh-pages/cuddle_bunny.gif
 ---
 apiVersion: v1
 kind: Service
