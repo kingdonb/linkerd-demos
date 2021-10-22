@@ -5,8 +5,9 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  interval: 613m17s
-  retryInterval: 10m0s
+  interval: 90m0s
+  timeout: 4m0s
+  retryInterval: 5m0s
   path: ./gitops/flux/apps/source/podinfo
   dependsOn:
     - name: linkerd-finally
@@ -34,8 +35,9 @@ metadata:
   name: podinfo-dev-hosts
   namespace: flux-system
 spec:
-  interval: 613m1s
-  retryInterval: 10m0s
+  interval: 90m1s
+  timeout: 4m0s
+  retryInterval: 5m0s
   path: ./gitops/flux/apps/source/podinfo-dev
   dependsOn:
     - name: linkerd-finally
@@ -51,8 +53,9 @@ metadata:
   name: emojivoto
   namespace: flux-system
 spec:
-  interval: 331m12s
-  retryInterval: 10m0s
+  interval: 90m2s
+  timeout: 4m0s
+  retryInterval: 5m0s
   path: ./gitops/flux/apps/source/emojivoto
   dependsOn:
     - name: linkerd-finally
@@ -84,8 +87,9 @@ metadata:
   name: booksapp
   namespace: flux-system
 spec:
-  interval: 863m14s
-  retryInterval: 10m0s
+  interval: 90m3s
+  timeout: 4m0s
+  retryInterval: 5m0s
   path: ./gitops/flux/apps/source/booksapp
   dependsOn:
     - name: linkerd-finally
@@ -117,8 +121,9 @@ metadata:
   name: deis-hosts
   namespace: flux-system
 spec:
-  interval: 863m14s
-  retryInterval: 10m0s
+  interval: 90m4s
+  timeout: 4m0s
+  retryInterval: 5m0s
   path: ./gitops/flux/apps/source/deis
   dependsOn:
     - name: ambassador

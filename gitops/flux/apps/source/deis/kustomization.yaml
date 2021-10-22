@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - host.yaml
 - mapping.yaml
+- ../deis-controller/ingress.yaml
 - ../ob-mirror/host.yaml
 - ../ob-mirror/mapping.yaml
 - ../blog/host.yaml
