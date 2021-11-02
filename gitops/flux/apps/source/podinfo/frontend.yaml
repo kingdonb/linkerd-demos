@@ -44,6 +44,8 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: nginx
           image: nginx:alpine

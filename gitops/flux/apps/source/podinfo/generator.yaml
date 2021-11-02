@@ -18,6 +18,8 @@ spec:
       labels:
         app: generator
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - image: buoyantio/slow_cooker:1.2.0
           name: default
